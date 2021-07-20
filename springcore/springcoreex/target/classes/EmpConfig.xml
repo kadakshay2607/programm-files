@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+<bean id="empAddress1" class="com.te.springcore.bean.EmpAddress">
+<property name="hno" value="100"/>
+<property name="streetno" value="11"/>
+<property name="state" value="mah"/>
+<property name="country" value="india"/>
+ </bean>
+ <bean id="empAddress" class="com.te.springcore.bean.EmpAddress" autowire-candidate="false">
+<property name="hno" value="101"/>
+<property name="streetno" value="12"/>
+<property name="state" value="goa"/>
+<property name="country" value="india"/>
+ </bean>
+ <bean class="com.te.springcore.bean.Emp" id="emp" autowire="byType">
+ <constructor-arg name="id" value="100"/>
+ <constructor-arg  name="name" value="john"/>
+ 
+ 
+ </bean>
+
+</beans>

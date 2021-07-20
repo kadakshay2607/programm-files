@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <!-- for list type -->
+<bean id="stuName" class="com.te.springcore.bean.Student">
+ <property name="names" >
+ <list>
+ <value>john</value>
+ <value>james</value>
+ <value>tom</value>
+ <value>rock</value>
+ </list>
+ </property>  
+ </bean>
+ 
+ <!-- for set type -->
+ <bean id="stuAddress" class="com.te.springcore.bean.Student">
+ <property name="address" >
+ <set>
+ <value>banglore</value>
+ <value>nashik</value>
+ <value>mumbai</value>
+ <value>pune</value>
+ </set>
+ </property>
+  
+ </bean>
+ 
+ <!-- for map type -->
+ <bean id="stuMap" class="com.te.springcore.bean.Student">
+ <property name="map" >
+ <map>
+ <entry key="1" value="java"/>
+ <entry key="2" value="python"/>
+ <entry key="3" value="c"/>
+ <entry key="4" value="c++"/>
+ </map>
+ </property>
+  
+ </bean>
+ 
+
+</beans>

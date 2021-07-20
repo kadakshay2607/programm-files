@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.te.springcore.bean.StudentAddress"
+		id="addressDetails">
+		<property name="hno" value="12" />
+		<property name="streetno" value="212" />
+		<property name="state" value="Bengaluru" />
+		<property name="country" value="India" />
+
+	</bean>
+
+	<bean class="com.te.springcore.bean.StudentDetails"
+		id="studentDetails">
+
+		<property name="id" value="01" />
+		<property name="name" value="Smith" />
+		<property name="address" ref="addressDetails"/>
+	</bean>
+
+
+
+</beans>
+
+	
